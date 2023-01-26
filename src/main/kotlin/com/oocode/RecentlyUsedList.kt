@@ -2,14 +2,18 @@ package com.oocode
 
 class RecentlyUsedList {
 
-    private var isEmpty = true;
+    private var item: String? = null
 
     fun isEmpty(): Boolean {
-        return isEmpty
+        return item == null
     }
 
     fun add(item: String) {
-        isEmpty = false
+        this.item = item
+    }
+
+    fun getMostRecent(): String {
+        return this.item!!
     }
 
 }

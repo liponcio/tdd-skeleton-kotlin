@@ -23,4 +23,14 @@ internal class RecentlyUsedListTest {
         list.add("item1")
         assertThat(list.isEmpty(), equalTo(false))
     }
+
+    @Test
+    fun `should be able to retrieve the most recent item from the list `() {
+        val list = RecentlyUsedList()
+        list.add("item1")
+        list.add("item2")
+        assertThat(list.getMostRecent(), equalTo("item2"))
+    }
+
+
 }
