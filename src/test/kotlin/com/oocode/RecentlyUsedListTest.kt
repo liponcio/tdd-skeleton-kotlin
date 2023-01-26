@@ -32,5 +32,10 @@ internal class RecentlyUsedListTest {
         assertThat(list.getMostRecent(), equalTo("item2"))
     }
 
+    @Test
+    fun `should return null when retrieve the most recent item from an empty list`() {
+        val list = RecentlyUsedList()
+        assertThat(list.getMostRecent(), equalTo(null))
+    }
 
 }
